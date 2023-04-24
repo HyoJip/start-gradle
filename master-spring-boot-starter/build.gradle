@@ -1,0 +1,8 @@
+plugins {
+    id 'me.bbbicb.java-conventions'
+}
+
+dependencies {
+    api project(':worker')
+    api project(':master-spring-boot-autoconfigure')
+}

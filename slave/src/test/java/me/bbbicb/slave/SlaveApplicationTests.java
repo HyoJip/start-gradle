@@ -1,7 +1,8 @@
 package me.bbbicb.slave;
 
-import me.bbbicb.worker.MasterProperty;
+import me.bbbicb.worker.HelloBot;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,11 +11,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SlaveApplicationTests {
 
   @Autowired
-  MasterProperty masterProperty;
+  HelloBot helloBot;
 
   @Test
-  void contextLoads() {
-    Assertions.assertThat(masterProperty.getHello()).isEqualTo("hi");
+  @DisplayName("기본으로, `HelloBot`을 등록하고 'hi'라고 인사한다.")
+  void default_registerHelloBotBean() {
+    Assertions.assertThat(helloBot.hello()).isEqualTo("hi");
   }
-
 }

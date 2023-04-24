@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library' apply false
+}
+
+repositories {
+    mavenCentral()
+}
+
+group = 'me.bbbicb'
+version = '0.0.1-SNAPSHOT'
+java.sourceCompatibility = JavaVersion.VERSION_17
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

@@ -1,9 +1,0 @@
-plugins {
-    id 'me.bbbicb.java-conventions'
-}
-
-dependencies {
-    compileOnly 'org.springframework.boot:spring-boot-autoconfigure:3.0.2'
-}
-
-description = 'worker'

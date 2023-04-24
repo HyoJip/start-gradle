@@ -1,0 +1,15 @@
+rootProject.name = 'master-spring-boot-starter'
+
+include 'worker'
+include 'master-spring-boot-autoconfigure'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('spring-boot', '3.0.2')
+            library('spring-autoconfigure', 'org.springframework.boot', 'spring-boot-autoconfigure').versionRef('spring-boot')
+            library('spring-test', 'org.springframework.boot', 'spring-boot-starter-test').versionRef('spring-boot')
+            plugin('spring-boot', 'org.springframework.boot').versionRef('spring-boot')
+        }
+    }
+}

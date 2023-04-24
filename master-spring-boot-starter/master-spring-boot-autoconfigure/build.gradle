@@ -1,0 +1,9 @@
+plugins {
+    id 'me.bbbicb.java-conventions'
+}
+
+dependencies {
+    compileOnly libs.spring.autoconfigure
+    implementation project(':worker')
+    testImplementation libs.spring.test
+}
